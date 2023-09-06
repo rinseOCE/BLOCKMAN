@@ -26,10 +26,7 @@ public class PauseMenu : MonoBehaviour
             {
                 PauseGame();
             }
-        }
-    
-        
-            
+        }      
     }
 
     public void PauseGame()
@@ -49,16 +46,14 @@ public class PauseMenu : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(1);
-    }
-
-    public void GoOptions()
-    {
-        SceneManager.LoadScene(2);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 
     public void ExitGame()
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
         isPaused = false;
     }
 }
